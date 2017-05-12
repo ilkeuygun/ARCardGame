@@ -151,21 +151,35 @@ namespace Com.Yosi.Linkar.Code.Models.GameItems
                 }
             }
 
-            // todo find all paths
-            Stack<Point> stack = new Stack<Point>();
-            stack.Push(TargetPosition);
 
-            while (stack.Count != 0)
+            // only finds one path
+            Point currentPoint = TargetPosition;
+            List<Point> pathPoints = new List<Point>();
+            pathPoints.Add(currentPoint);
+
+            while (neighbours[currentPoint.X, currentPoint.Y].Any())
             {
-                Point currentPoint = stack.Pop();
-
-                foreach (Point neighbour in neighbours[currentPoint.X, currentPoint.Y])
-                {
-                    stack.Push(neighbour);
-                }
+                currentPoint = neighbours[currentPoint.X, currentPoint.Y].First();
+                pathPoints.Add(currentPoint);
             }
 
-            return null;
+            return new List<Path>() { new Path(pathPoints, this) };
+
+            // todo find all paths
+            //Stack<Point> stack = new Stack<Point>();
+            //stack.Push(TargetPosition);
+
+            //while (stack.Count != 0)
+            //{
+            //    Point currentPoint = stack.Pop();
+//
+  //              foreach (Point neighbour in neighbours[currentPoint.X, currentPoint.Y])
+    //            {
+      //              stack.Push(neighbour);
+        //        }
+          //  }
+
+            //return null;
         }
     }
 }
