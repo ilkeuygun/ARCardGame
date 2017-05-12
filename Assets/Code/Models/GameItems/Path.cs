@@ -37,7 +37,7 @@ namespace Com.Yosi.Linkar.Code.Models.GameItems
                 }
             }
 
-            points[(CardType)Cards[0].Color] += FINISHER_BONUS;
+            points[(CardType)Cards.Last().Color] += FINISHER_BONUS;
 
             return points;
         }
