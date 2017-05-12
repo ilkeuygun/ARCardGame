@@ -14,7 +14,7 @@ namespace Com.Yosi.Linkar.Code.Models.GameItems
         public Card[,] Cards { get; private set; }
 
         public Point StartPosition { get; private set; }
-        public Point TargetPosition { get; private set; }
+        public Point TargetPosition { get; set; }
 
         public Board()
         {

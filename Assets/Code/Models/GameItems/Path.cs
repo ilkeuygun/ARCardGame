@@ -12,6 +12,11 @@ namespace Com.Yosi.Linkar.Code.Models.GameItems
         {
             Cards = points.Select(p => board.Cards[p.X, p.Y]).ToList();
         }
+
+        public override string ToString()
+        {
+            return String.Join("\n", Cards.Select(c => "Color: " + c.Color.ToString() + " -> " + c.Position.X + "-" + c.Position.Y).ToArray());
+        }
     }
 }
 

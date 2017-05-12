@@ -4,7 +4,7 @@ namespace Com.Yosi.Linkar.Code.Models.GameItems
 {
     public class Game
     {
-        private static readonly Color[] DEFAULT_COLORS = new Color[] { Color.Blue, Color.Green, Color.Red, Color.Yellow };
+        private static readonly CardType[] DEFAULT_COLORS = new CardType[] { CardType.Blue, CardType.Green, CardType.Red, CardType.Yellow };
 
         public Player[] Players { get; private set; }
         public Board Board { get; private set; }

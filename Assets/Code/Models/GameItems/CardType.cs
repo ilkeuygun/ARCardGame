@@ -2,7 +2,7 @@
 
 namespace Com.Yosi.Linkar.Code.Models.GameItems
 {
-    public enum Color
+    public enum CardType
     {
         Red, Yellow, Blue, Green
     }

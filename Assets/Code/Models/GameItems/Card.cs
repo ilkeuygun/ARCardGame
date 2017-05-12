@@ -4,10 +4,10 @@ namespace Com.Yosi.Linkar.Code.Models.GameItems
 {
     public class Card
     {
-        public Color? Color { get; private set; }
+        public CardType? Color { get; private set; }
         public Point Position { get; private set; }
 
-        public Card(Color? color, Point position)
+        public Card(CardType? color, Point position)
         {
             Color = color;
             Position = position;
